@@ -1,0 +1,1039 @@
+@import './_vars'
+
+.window-view
+    position: relative
+
+    width: 100%
+    height: 100%
+
+    overflow: hidden
+
+    &__work-name
+        font-size: 3rem
+        font-weight: bold
+
+    &__wrapper
+        user-select: none
+
+        & > *+*
+            margin-top: $gap-500
+
+    &__mountain, &__plain, &__sun, &__lake, &__cloud__wrapper, &__cup, &__cup__body__tea, &__cup__vapour, &__plate, &__cookie, &__fortune, &__prediction__wrapper, &__wok
+        transition-duration: 500ms
+
+    &__prediction
+        position: absolute
+
+        color: black
+
+        font-size: 1.5rem
+
+        padding: 2rem 5rem
+
+        text-align: center
+
+        top: 25%
+        left: 5%
+
+        height: 50%
+        width: 90%
+
+        background-color: white
+
+        cursor: pointer
+
+        &__text
+            &__wrapper
+                width: 100%
+                height: 90%
+
+        &__headline
+            font-size: 1rem
+            font-weight: bold
+            font-style: italic
+
+            color: $clr-primary-900
+
+        &__left
+            position: absolute
+
+            top: -15%
+            left: 0
+
+            height: 130%
+            width: 15%
+
+            background-color: #acacac
+
+        &__right
+            position: absolute
+
+            top: -15%
+            right: 0
+
+            height: 130%
+            width: 15%
+
+            background-color: #acacac
+
+        &__wrapper
+            display: none
+
+            position: absolute
+
+            z-index: 1000
+
+            top: -100%
+            left: 0
+
+            height: 100%
+            width: 100%
+
+            background-color: #000000b6
+
+        &__open
+            top: 0%
+            display: initial
+
+            animation: 300ms predictionAppear
+
+    &__cloud
+        position: relative
+        height: 3rem
+        width: 5rem
+
+        animation: 10s cloudsMove infinite linear
+
+        &__wrapper
+            position: absolute
+
+        &__piece
+            position: absolute
+
+            height: 60%
+            width: 50%
+
+            border-radius: 1rem
+
+            background-color: white
+
+            &__1
+                top: 0
+                right: 20%
+
+            &__2
+                bottom: 0
+                width: 100%
+                right: 0%
+
+    &__sun
+        position: absolute
+
+        width: 70%
+        height: 70%
+
+        border-radius: 50%
+
+        background-color: yellow
+
+        &__wrapper
+            transition-duration: 500ms
+            position: relative
+
+            width: 25%
+            height: 25%
+
+        &__oreol
+            position: absolute
+            width: 100%
+            height: 100%
+
+            border-radius: 50%
+
+            opacity: .25
+
+            background-color: yellow
+
+    &__night-sky
+        background: #483bad
+        position: absolute
+
+        transition-duration: 700ms
+
+        top: 0
+
+        width: 100%
+        height: 100%
+
+        opacity: 0
+
+    &__stars
+        &__star
+            position: absolute
+
+            width: .25rem
+            height: .25rem
+
+            border-radius: 50%
+
+            background-color: white
+
+            &__1
+                top: 1rem
+                left: 2rem
+
+            &__2
+                top: 7rem
+                left: 4rem
+
+            &__3
+                top: 8rem
+                right: 4rem
+
+            &__4
+                top: 4rem
+                right: 8rem
+
+            &__5
+                top: 1rem
+                right: 2rem
+
+            &__6
+                top: 2rem
+                right: 14rem
+
+    &__moon-box
+        position: absolute
+
+        width: 25%
+        height: 25%
+
+        border-radius: 50%
+
+        overflow: hidden
+
+        transform: rotate(30deg) translateX(5rem)
+
+        &__shadow
+            position: absolute
+            background: #483bad
+
+            left: -25%
+
+            border-radius: 50%
+
+            width: 100%
+            height: 100%
+
+        &__light
+            position: absolute
+            background-color: white
+
+            border-radius: 50%
+
+            top: 0
+            right: -1%
+
+            width: 99%
+            height: 99%
+
+    &__mountain
+        position: absolute
+        height: 50%
+        width: 40%
+
+        transform: rotate(45deg)
+
+        &__texture
+            transition-duration: 500ms
+            width: 32%
+            height: 25%
+            background: white
+
+        &__back
+            height: 60%
+            width: 50%
+            right: 25%
+            bottom: 4%
+
+        &__left
+            left: -10%
+            bottom: 0%
+
+        &__right
+            height: 50%
+            width: 40%
+            right: -10%
+            bottom: 5%
+
+    &__lake
+        position: absolute
+
+        bottom: 0
+
+        height: 20%
+        width: 150%
+
+        background-color: blue
+
+    &__plain
+        position: absolute
+
+        background-color: black
+
+        &__1
+            bottom: -21%
+            right: -160%
+
+            transform: rotate(-5deg)
+
+            border-radius: 50%
+
+            height: 50%
+            width: 300%
+
+        &__2
+            bottom: -20%
+            left: -30%
+
+            border-radius: 50%
+            height: 50%
+            width: 100%
+
+        &__3
+            bottom: -13%
+            left: 40%
+
+            border-radius: 50%
+            height: 50%
+            width: 200%
+
+    &__window-frame
+        position: relative
+
+        padding: 2rem
+        width: 30rem
+        height: 30rem
+
+        background-color: white
+
+        margin-top: $gap-700
+
+    &__windowsill
+        position: relative
+
+        margin-top: 0
+
+        height: 2rem
+        width: 34rem
+
+    &__wok
+        position: absolute
+
+        bottom: 100%
+        right: 30%
+
+        width: 9rem
+        height: 9rem
+
+        &__vapour
+            position: absolute
+
+            top: 40%
+
+            width: 70%
+            height: 100%
+
+            &__piece
+                position: absolute
+
+                background-color: white
+
+                border-radius: 1rem
+
+                width: 1rem
+                height: 2rem
+
+                opacity: 0
+
+                &__1
+                    left: 38%
+                    animation: 2s vapourMove 1s infinite linear
+
+                &__2
+                    right: -10%
+                    animation: 2s vapourMove .9s infinite linear
+
+                &__3
+                    right: 18%
+                    animation: 2s vapourMove 400ms infinite linear
+
+        &__stick
+            position: absolute
+
+            right: 25%
+
+            width: 3%
+            height: 80%
+
+            background-color: #ff924e
+
+            border-radius: 1rem
+
+            &__1
+                top: 6%
+
+                transform: rotate(18deg)
+
+            &__2
+
+                transform: rotate(12deg)
+
+        &__body
+            position: absolute
+
+            bottom: 0
+            left: 20%
+
+            overflow: hidden
+
+            height: 60%
+            width: 60%
+
+            &__center
+                position: absolute
+
+                top: 0%
+                left: 30%
+
+                height: 100%
+                width: 40%
+
+                background-color: #bc2424
+
+            &__left
+                position: absolute
+
+                top: 20%
+                left: -28%
+
+                transform: rotate(80deg)
+
+                height: 50%
+                width: 120%
+
+                background-color: #bc2424
+
+            &__right
+                position: absolute
+
+                top: 20%
+                right: -28%
+
+                transform: rotate(-80deg)
+
+                height: 50%
+                width: 120%
+
+                background-color: #bc2424
+
+        &__top
+            position: absolute
+
+            height: 50%
+            width: 5%
+
+            background-color: #bc2424
+
+            &__left
+                transform: rotate(45deg)
+
+                top: 4%
+                right: 5%
+
+            &__right
+                transform: rotate(-45deg)
+
+                top: 4%
+                left: 5%
+
+    &__plate
+        position: absolute
+
+        bottom: 100%
+        right: 30%
+
+        width: 8rem
+        height: 1.75rem
+
+        opacity: 0
+
+        &__top
+            width: 100%
+            height: 70%
+
+            border-radius: .5rem
+
+            background-color: #9b9b9b
+
+        &__bottom
+            width: 70%
+            height: 30%
+
+            border-bottom-left-radius: .5rem
+            border-bottom-right-radius: .5rem
+
+            background-color: #6d6d6d
+
+    &__cookie
+        opacity: 0
+        position: absolute
+
+        &__1
+            top: -60%
+            left: 20%
+            transform: rotate(-15deg)
+
+        &__2
+            top: -40%
+            right: 20%
+
+        &__3
+            top: -110%
+            right: 15%
+            transform: rotate(20deg)
+
+        &__base
+            width: 3rem
+            height: 1rem
+
+            border-radius: .5rem
+
+            background-color: #9d5122
+
+        &__choc
+            position: absolute
+
+            width: .7rem
+            height: .35rem
+
+            border-radius: 3rem
+
+            background-color: #3d1700
+
+            &__1
+                top: -10%
+                left: 10%
+
+            &__2
+                top: -2%
+                left: 60%
+
+            &__3
+                bottom: 25%
+                left: 35%
+
+    &__fortune
+        position: absolute
+
+        cursor: pointer
+
+        display: none
+
+        bottom: 100%
+
+        width: 6rem
+        height: 3rem
+
+        overflow: hidden
+
+        &__note
+            position: absolute
+
+            bottom: 0
+            left: 40%
+
+            width: 1.5rem
+            height: 2rem
+
+            background-color: white
+
+            animation: 1s goldGlow infinite
+
+        &__left
+            position: absolute
+
+            bottom: -1rem
+            left: 10%
+
+            width: 4rem
+            height: 2rem
+
+            transform: rotate(20deg)
+
+            background-color: #ff953e
+
+        &__right
+            position: absolute
+
+            bottom: -1rem
+            right: 5%
+
+            width: 4rem
+            height: 2rem
+
+            transform: rotate(-20deg)
+
+            background-color: #ff953e
+
+    &__cup
+        position: relative
+
+        overflow: hidden
+
+        width: 7rem
+        height: 6rem
+
+        &__wrapper
+            position: absolute
+
+            bottom: 100%
+            right: 5%
+
+        &__vapour
+            position: absolute
+
+            width: 70%
+            height: 100%
+
+            &__piece
+                position: absolute
+
+                background-color: white
+
+                border-radius: 1rem
+
+                width: 1rem
+                height: 2rem
+
+                opacity: 0
+
+                &__1
+                    left: 15%
+                    animation: 2s vapourMove 1s infinite linear
+
+                &__2
+                    right: 15%
+                    animation: 2s vapourMove .9s infinite linear
+
+                &__3
+                    right: 40%
+                    animation: 2s vapourMove 400ms infinite linear
+
+        &__handle
+            position: absolute
+
+            right: 10%
+            top: 20%
+
+            height: 70%
+            width: 60%
+
+            border-radius: .5rem
+            border: 1rem solid #9f6a31
+
+        &__body
+            position: relative
+
+            height: 100%
+            width: 70%
+
+            background-color: #e5a764
+
+            overflow: hidden
+
+            border-bottom-left-radius: .5rem
+            border-bottom-right-radius: .5rem
+
+            &__tea
+                position: absolute
+
+                width: 100%
+                height: 100%
+
+                opacity: 0
+
+                &__label
+                    position: absolute
+
+                    top: 43%
+                    left: 29.75%
+
+                    &__1
+                        position: absolute
+
+                        width: 1.2rem
+                        height: 1.5rem
+
+                        border-radius: .25rem
+                        background-color: #00a256
+
+                    &__2
+                        position: absolute
+
+                        top: -.38rem
+                        left: .15rem
+
+                        width: .9rem
+                        height: .9rem
+
+                        transform: rotate(45deg)
+
+                        border-radius: .25rem
+                        background-color: #00a256
+
+                &__rope
+                    position: absolute
+
+                    left: 40%
+
+                    width: 3%
+                    height: 40%
+
+                    background-color: white
+
+            &__print
+                position: absolute
+
+                width: 40%
+                height: 40%
+
+                top: 30%
+                left: 30%
+
+                border-radius: .75rem
+
+                background-color: #513619
+
+                transform: rotate(-20deg)
+
+                &__stroke
+                    position: absolute
+
+                    width: 20%
+                    height: 85%
+
+                    right: 40%
+                    top: 5%
+
+                    border-radius: .75rem
+
+                    background-color: #775025
+
+            &__texture
+                position: absolute
+
+                width: 100%
+                height: 15%
+
+                background-color: #9f6a31
+
+                &__1
+                    top: 0
+
+                &__2
+                    bottom: 0
+
+    &__buttons-box
+
+        width: 34rem
+        padding: $gap-200 $gap-200
+
+        background-color: $clr-primary-900
+
+        border-radius: .5rem
+
+        & > *+*
+            margin-left: $gap-200
+
+    &__button
+        width: 100%
+        padding: $gap-300 $gap-400
+
+        cursor: pointer
+
+        font-size: 1.5rem
+
+        color: white
+
+        background-color: inherit
+
+        border-radius: .5rem
+        border: none
+
+        &:hover
+            background-color: rgba(255, 255, 255, .25)
+
+    &__author
+        &__name
+            font-size: 1.25rem
+
+    &__info
+        color: $clr-secondary-500
+        & > *+*
+            margin-top: $gap-200
+
+.morning
+    background: linear-gradient(#da8f5a, #fedcc3 50%)
+
+    .window-view
+        &__cloud
+
+            &__piece
+                background-color: #ffffff
+
+            &__wrapper
+                &__1
+                    transform: translateX(.5rem) translateY(0rem)
+                &__2
+                    transform: translateX(5rem) translateY(3rem)
+
+        &__sun
+            background-color: #ff7a7a
+
+            &__oreol
+                background-color: #ff7a7a
+
+            &__wrapper
+                transform: translateX(3rem) translateY(5rem)
+
+        &__mountain
+            background-color: #7b2835
+
+            &__texture
+                background-color: #c26a95
+
+        &__lake
+            background-color: #70598c
+
+        &__plain
+            &__1
+                background-color: #966360
+
+            &__2, &__3
+                background-color: #7d4848
+
+        &__wok
+            transform: translateX(10rem)
+            opacity: 0
+
+        &__plate
+            opacity: 1
+
+        &__cookie
+            opacity: 1
+
+        &__button
+            &__morning
+                animation: 150ms buttonActive
+                color: $clr-primary-500
+                background-color: white
+
+.night
+    .window-view
+        &__cloud
+            &__wrapper
+                &__1
+                    transform: translateX(30rem) translateY(10rem)
+                &__2
+                    transform: translateX(30rem) translateY(10rem)
+
+        &__night-sky
+            opacity: 1
+
+        &__sun
+            &__wrapper
+                transform: translateX(50rem) translateY(50rem)
+        &__mountain
+            background-color: #5b57be
+            &__texture
+                background-color: #6763d3
+
+        &__lake
+            background-color: #2d2a8f
+        &__plain
+            &__1
+                background-color: #38359d
+
+            &__2, &__3
+                background-color: #524ebc
+
+        &__wok
+            transform: translateX(10rem)
+            opacity: 0
+
+        &__plate
+            transform: translateX(10rem)
+            opacity: 0
+
+        &__cup
+            transform: translateX(10rem)
+            opacity: 0
+
+            &__vapour
+                opacity: 0
+
+        &__button
+            &__night
+                animation: 150ms buttonActive
+                color: $clr-primary-500
+                background-color: white
+
+.day
+    background: linear-gradient(#89edff, #23deff 50%)
+
+    .window-view
+        &__cloud
+            &__wrapper
+                &__1
+                    transform: translateX(6rem) translateY(-3rem)
+                &__2
+                    transform: translateX(16rem) translateY(-1rem)
+        &__sun
+            &__wrapper
+                transform: translateX(11rem) translateY(.1rem)
+
+        &__mountain
+            background-color: #2fbe55
+
+            &__texture
+                background-color: #ffffff
+
+        &__lake
+            background-color: #2d7aff
+
+        &__plain
+            &__1
+                background-color: #22a345
+
+            &__2, &__3
+                background-color: #278c42
+
+        &__plate
+            transform: translateX(10rem)
+            opacity: 0
+
+        &__wok
+            opacity: 1
+
+        &__cup
+            &__vapour
+                opacity: 0
+
+        &__button
+            &__day
+                animation: 150ms buttonActive
+                color: $clr-primary-500
+                background-color: white
+
+.sunset
+    background: linear-gradient(#c16329, #ffcb48 50%)
+
+    .window-view
+        &__cloud
+            &__wrapper
+                &__1
+                    transform: translateX(30rem) translateY(10rem)
+                &__2
+                    transform: translateX(30rem) translateY(10rem)
+        &__sun
+            background-color: #ff5e00
+            &__oreol
+                background-color: #ff5e00
+            &__wrapper
+                transform: translateX(18rem) translateY(5rem)
+        &__mountain
+            background-color: #813813
+            &__texture
+                background-color: #bc6f2c
+
+        &__lake
+            background-color: #30769e
+
+        &__plain
+            &__1
+                background-color: #727f1a
+
+            &__2, &__3
+                background-color: #54621c
+
+        &__fortune
+            display: initial
+
+        &__wok
+            transform: translateX(10rem)
+            opacity: 0
+
+        &__plate
+            opacity: 1
+
+        &__cup
+            &__body
+                &__tea
+                    opacity: 1
+
+        &__button
+            &__sunset
+                animation: 150ms buttonActive
+                color: $clr-primary-500
+                background-color: white
+
+#window-buttons
+    background: initial
+
+#window-windowsill
+    background: initial
+    background-color: grey
+
+@keyframes predictionAppear
+    0%
+        opacity: 0
+        display: initial
+    100%
+        opacity: 1
+
+@keyframes goldGlow
+    0%
+        background-color: white
+
+    50%
+        background-color: gold
+
+    100%
+        background-color: white
+
+@keyframes buttonActive
+    0%
+        background-color: inherit
+    100%
+        background-color: white
+
+@keyframes vapourMove
+    0%
+        opacity: .9
+        transform: translateY(0rem)
+
+    40%
+        opacity: .9
+
+    100%
+        opacity: 0
+        transform: translateY(-6rem)
+
+@keyframes cloudsMove
+    0%
+        transform: translateX(0rem)
+    50%
+        transform: translateX(1rem)
+    100%
+        transform: translateX(0rem)
