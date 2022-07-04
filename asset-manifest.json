@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/summertime/static/css/main.caf7c735.css",
+    "main.js": "/summertime/static/js/main.a36a8013.js",
+    "index.html": "/summertime/index.html",
+    "main.caf7c735.css.map": "/summertime/static/css/main.caf7c735.css.map",
+    "main.a36a8013.js.map": "/summertime/static/js/main.a36a8013.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caf7c735.css",
+    "static/js/main.a36a8013.js"
+  ]
+}
