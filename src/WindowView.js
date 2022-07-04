@@ -220,6 +220,9 @@ function WindowView() {
             <div className="flex flex-column flex-align-center window-view__info">
                 <a
                     className="window-view__author__name"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    href="https://landerexit.github.io/personalCard/"
                 >
                     {"Каримов Эмиль "}
                 </a>

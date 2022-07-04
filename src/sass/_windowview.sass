@@ -776,7 +776,15 @@
 
     &__author
         &__name
+            cursor: pointer
             font-size: 1.25rem
+
+            transition-duration: 150ms
+
+            &:hover
+                color: $clr-text-5
+            &:active
+                color: $clr-text-2
 
     &__info
         color: $clr-secondary-500
