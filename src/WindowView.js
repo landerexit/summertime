@@ -224,7 +224,7 @@ function WindowView() {
                     rel="noopener noreferrer nofollow"
                     href="https://landerexit.github.io/personalCard/"
                 >
-                    {"Каримов Эмиль "}
+                    {"Эмиль Каримов"}
                 </a>
                 <span>©2022</span>
             </div>

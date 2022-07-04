@@ -182,25 +182,37 @@
                 top: 1rem
                 left: 2rem
 
+                animation: 4s starShine infinite
+
             &__2
                 top: 7rem
                 left: 4rem
+
+                animation: 4s starShine 3s infinite
 
             &__3
                 top: 8rem
                 right: 4rem
 
+                animation: 4s starShine 2.5s infinite
+
             &__4
                 top: 4rem
                 right: 8rem
+
+                animation: 4s starShine 3.5s infinite
 
             &__5
                 top: 1rem
                 right: 2rem
 
+                animation: 4s starShine 1.5s infinite
+
             &__6
                 top: 2rem
                 right: 14rem
+
+                animation: 4s starShine 2s infinite
 
     &__moon-box
         position: absolute
@@ -1045,3 +1057,13 @@
         transform: translateX(1rem)
     100%
         transform: translateX(0rem)
+
+@keyframes starShine
+    0%
+        opacity: 0.1
+
+    50%
+        opacity: 1
+
+    100%
+        opacity: 0.1
