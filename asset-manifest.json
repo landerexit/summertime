@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/summertime/static/css/main.caf7c735.css",
-    "main.js": "/summertime/static/js/main.a36a8013.js",
+    "main.css": "/summertime/static/css/main.a186e74d.css",
+    "main.js": "/summertime/static/js/main.57dd7318.js",
     "index.html": "/summertime/index.html",
-    "main.caf7c735.css.map": "/summertime/static/css/main.caf7c735.css.map",
-    "main.a36a8013.js.map": "/summertime/static/js/main.a36a8013.js.map"
+    "main.a186e74d.css.map": "/summertime/static/css/main.a186e74d.css.map",
+    "main.57dd7318.js.map": "/summertime/static/js/main.57dd7318.js.map"
   },
   "entrypoints": [
-    "static/css/main.caf7c735.css",
-    "static/js/main.a36a8013.js"
+    "static/css/main.a186e74d.css",
+    "static/js/main.57dd7318.js"
   ]
 }
